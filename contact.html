@@ -6,6 +6,10 @@
   <title>Skyzz Shop - Contact</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background-color: #0e0e0e;
@@ -41,31 +45,68 @@
 
     .hero {
       text-align: center;
-      padding: 80px 20px;
+      padding: 80px 20px 40px;
       background: linear-gradient(135deg, #1b1b3a, #222246);
     }
 
-    .hero p {
-      font-size: 1.3rem;
+    .hero h2 {
+      font-size: 3rem;
+      color: #00ffe7;
+      margin-bottom: 20px;
+    }
+
+    .contact-card {
+      background-color: #1f1f3d;
+      border-radius: 15px;
+      padding: 40px 30px;
+      max-width: 600px;
+      margin: 30px auto;
+      box-shadow: 0 0 20px rgba(0,255,231,0.2);
+      text-align: center;
+    }
+
+    .contact-card p {
+      font-size: 1.2rem;
       color: #cccccc;
-      max-width: 800px;
-      margin: 0 auto 20px;
+      margin: 10px 0;
+    }
+
+    .contact-card strong {
+      color: #00ffe7;
     }
 
     .btn {
       display: inline-block;
-      padding: 12px 25px;
+      padding: 12px 30px;
       background: #00ffe7;
       color: #0e0e0e;
       text-decoration: none;
       border-radius: 50px;
       font-weight: bold;
-      margin-top: 20px;
+      margin-top: 25px;
       transition: background 0.3s;
     }
 
     .btn:hover {
       background: #00c7b0;
+    }
+
+    .faq {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .faq h3 {
+      font-size: 1.5rem;
+      color: #00ffe7;
+      margin-bottom: 10px;
+    }
+
+    .faq p {
+      font-size: 1rem;
+      color: #bbb;
+      margin-bottom: 30px;
     }
 
     footer {
@@ -90,10 +131,25 @@
 
   <section class="hero">
     <h2>Contact & Commande</h2>
-    <p>Pour commander ou obtenir plus d’informations, contacte-moi sur :</p>
+    <p>Une question ? Une commande personnalisée ? Nous sommes à votre écoute !</p>
+  </section>
+
+  <section class="contact-card">
     <p><strong>Discord :</strong> Sky7rome</p>
     <p><strong>Email :</strong> contact@skyzzshop.gg</p>
     <a href="https://discord.com" target="_blank" class="btn">Me contacter sur Discord</a>
+  </section>
+
+  <section class="faq">
+    <h3>Foire aux questions :</h3>
+    <p><strong>Quand vais-je recevoir ma commande ?</strong><br>
+    En général sous 10 minutes si nous sommes disponibles, sinon sous 24h maximum.</p>
+
+    <p><strong>Comment se déroule la livraison ?</strong><br>
+    Par message Discord ou email selon le produit choisi.</p>
+
+    <p><strong>Est-ce sécurisé ?</strong><br>
+    Oui, toutes nos livraisons sont testées, privées et sécurisées.</p>
   </section>
 
   <footer>
