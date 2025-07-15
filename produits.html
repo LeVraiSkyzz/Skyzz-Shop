@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Skyzz Shop - Produits</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
   <style>
     body {
       margin: 0;
@@ -12,85 +13,112 @@
       background-color: #0d0d0d;
       color: #ffffff;
     }
+
     header {
+      background-color: #111;
       padding: 20px;
-      background: #0f0f1a;
       text-align: center;
-      border-bottom: 1px solid #222;
     }
+
+    header h1 {
+      color: #00ffff;
+      font-size: 2.5rem;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
     nav a {
       margin: 0 15px;
-      color: #00ffff;
+      color: #ffffff;
       text-decoration: none;
       font-weight: bold;
     }
-    .section-title {
-      text-align: center;
-      font-size: 3rem;
-      margin: 30px 0;
+
+    nav a:hover {
       color: #00ffff;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-top: 30px;
       text-shadow: 0 0 10px #00ffff;
     }
-    .products-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 0 20px 50px;
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
+
     .product-card {
-      background: #151530;
-      border-radius: 15px;
+      background-color: #151535;
+      border-radius: 20px;
       padding: 20px;
-      width: 300px;
-      box-shadow: 0 0 15px #00ffff20;
-      transition: transform 0.2s ease;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s;
     }
+
     .product-card:hover {
-      transform: scale(1.05);
+      transform: translateY(-5px);
     }
+
     .product-card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 12px;
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
       margin-bottom: 15px;
     }
+
     .product-card h3 {
       color: #00ffff;
       font-size: 1.3rem;
-      margin: 10px 0;
-    }
-    .product-card p {
-      color: #ddd;
-      font-size: 0.95rem;
-      margin: 10px 0;
-    }
-    .price {
-      font-size: 1.1rem;
-      color: #00ffff;
-      margin: 15px 0;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #00ffff;
-      color: #000;
-      border-radius: 30px;
-      font-weight: bold;
+      margin-bottom: 10px;
       text-align: center;
-      text-decoration: none;
-      transition: background 0.3s;
     }
+
+    .product-card p {
+      color: #ccc;
+      text-align: center;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .price {
+      margin-top: 15px;
+      color: #00ffff;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      background-color: #00ffff;
+      color: #000;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 50px;
+      margin-top: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
     .btn:hover {
-      background: #00cccc;
+      background-color: #00cccc;
     }
+
     footer {
       text-align: center;
       padding: 20px;
-      background: #0f0f1a;
-      border-top: 1px solid #222;
+      background-color: #111;
+      margin-top: 40px;
       color: #888;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -105,42 +133,40 @@
     </nav>
   </header>
 
-  <h2 class="section-title">Nos Produits</h2>
+  <h2>Nos Produits</h2>
 
-  <section class="products-container">
-
+  <section class="product-grid">
     <div class="product-card">
-      <img src="images/81Z+V7GJIEL._h1_.png" alt="Compte Clash of Clans">
+      <img src="81Z+V7GJIEL_h1_.png" alt="Compte Clash of Clans">
       <h3>Compte Clash of Clans</h3>
-      <p>Comptes TH11 à TH17 full max, prêts pour la guerre. Livraison immédiate.</p>
-      <div class="price">À partir de 15 €</div>
-      <a href="#" class="btn">Acheter</a>
+      <p>Comptes TH11 à TH17, full max, prêts à dominer les guerres. Livraison instantanée.</p>
+      <div class="price">À partir de 15 €</div>
+      <button class="btn">Acheter</button>
     </div>
 
     <div class="product-card">
-      <img src="images/clash-of-clans-gold-pass-points-boost.webp" alt="Pass Or COC">
+      <img src="clash-of-clans-gold-pass-points-boost.webp" alt="Pass Or Clash of Clans">
       <h3>Pass Or Clash of Clans</h3>
-      <p>Obtiens ton Pass Or du mois en cours sur ton compte. Rapide & sécurisé.</p>
-      <div class="price">À partir de 7 €</div>
-      <a href="#" class="btn">Acheter</a>
+      <p>Obtiens le Pass Or du mois en cours, livraison rapide et sécurisée sur ton compte.</p>
+      <div class="price">À partir de 7 €</div>
+      <button class="btn">Acheter</button>
     </div>
 
     <div class="product-card">
-      <img src="images/nitro-discord.avif" alt="Nitro Discord">
+      <img src="nitro-discord.avif" alt="Nitro Discord">
       <h3>Nitro Discord</h3>
-      <p>Classic ou Boost : 1 mois, 3 mois ou 1 an. Livraison instantanée, meilleur prix.</p>
-      <div class="price">À partir de 3 €</div>
-      <a href="#" class="btn">Acheter</a>
+      <p>Nitro Classic ou Boost – 1 mois, 3 mois ou 1 an. Meilleur prix garanti. Livraison immédiate.</p>
+      <div class="price">À partir de 3 €</div>
+      <button class="btn">Acheter</button>
     </div>
 
     <div class="product-card">
-      <img src="images/imgwebp.webp" alt="Boosts Discord">
+      <img src="imgwebp.webp" alt="Boosts Discord">
       <h3>Boosts Discord</h3>
-      <p>Ajoute des boosts à ton serveur Discord pour plus de qualité audio et d’options.</p>
-      <div class="price">À partir de 2 € / boost</div>
-      <a href="#" class="btn">Acheter</a>
+      <p>Ajoute des boosts à ton serveur pour plus de qualité audio, de slots et d’icônes animés.</p>
+      <div class="price">À partir de 2 € / boost</div>
+      <button class="btn">Acheter</button>
     </div>
-
   </section>
 
   <footer>
