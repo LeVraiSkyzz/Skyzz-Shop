@@ -1,137 +1,100 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skyzz Shop - Comptes & Boosts Gaming</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skyzz Shop - Accueil</title>
+  <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
-    * {
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
-
-    body {
-      background-color: #0e0e0e;
-      color: #ffffff;
-      font-family: 'Orbitron', sans-serif;
-      line-height: 1.6;
-    }
-
     header {
-      background-color: #1a1a1a;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px #0ff;
     }
-
-    header h1 {
-      color: #00ffe7;
-      font-size: 2.5rem;
-      letter-spacing: 2px;
-    }
-
     nav a {
-      color: #ffffff;
+      color: cyan;
       text-decoration: none;
-      margin-left: 30px;
-      font-size: 1rem;
-      transition: color 0.3s;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: 0.3s;
     }
-
     nav a:hover {
-      color: #00ffe7;
+      color: #fff;
+      text-shadow: 0 0 5px #0ff;
     }
-
     .hero {
       text-align: center;
       padding: 80px 20px;
-      background: linear-gradient(135deg, #1b1b3a, #222246);
+      background: linear-gradient(to bottom, #0ff2, transparent);
+      animation: fadeIn 1.5s ease-in;
     }
-
-    .hero h2 {
-      font-size: 3.5rem;
-      color: #00ffe7;
-      margin-bottom: 20px;
+    .hero h1 {
+      font-size: 3em;
+      text-shadow: 0 0 20px #0ff;
     }
-
     .hero p {
-      font-size: 1.3rem;
-      color: #cccccc;
-      max-width: 800px;
-      margin: 0 auto 20px;
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 20px auto;
     }
-
-    .cta-buttons {
-      margin-top: 30px;
-    }
-
-    .cta-buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      background: #00ffe7;
-      color: #0e0e0e;
-      text-decoration: none;
-      border-radius: 50px;
+    .btn {
+      background: cyan;
+      color: #000;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-size: 1.1em;
       font-weight: bold;
-      transition: background 0.3s;
+      text-decoration: none;
+      transition: 0.3s;
     }
-
-    .cta-buttons a:hover {
-      background: #00c7b0;
+    .btn:hover {
+      background: #0ff;
+      box-shadow: 0 0 15px #0ff;
     }
-
     .features {
-      background-color: #151534;
-      padding: 60px 20px;
-      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      background-color: #111;
     }
-
-    .features h3 {
-      color: #00ffe7;
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
     .feature {
-      background-color: #1f1f3d;
+      background: #1a1a2e;
+      color: white;
+      margin: 15px;
       padding: 20px;
-      border-radius: 10px;
-      transition: transform 0.3s;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #0ff4;
+      width: 300px;
+      text-align: center;
+      animation: slideUp 1s ease;
     }
-
-    .feature:hover {
-      transform: translateY(-5px);
+    .feature h3 {
+      color: cyan;
     }
-
-    .feature h4 {
-      color: #00ffe7;
-      font-size: 1.5rem;
-      margin-bottom: 10px;
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
     }
-
-    .feature p {
-      color: #cccccc;
-      font-size: 0.95rem;
+    @keyframes slideUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
     }
-
     footer {
       text-align: center;
-      background: #000;
       padding: 20px;
-      font-size: 0.9rem;
-      color: #777;
+      background: #111;
+      color: #aaa;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -147,34 +110,23 @@
   </header>
 
   <section class="hero">
-    <h2>Bienvenue sur Skyzz Shop</h2>
-    <p>Vente de comptes Clash of Clans, Pass Or, Nitro Discord, Boosts et bien plus encore. Sécurisé, rapide, fiable. Rejoins Skyzz Shop et profite de tarifs inédits !</p>
-    
-    <div class="cta-buttons">
-      <a href="produits.html">Voir nos produits</a>
-      <a href="contact.html">Nous contacter</a>
-    </div>
+    <h1>Bienvenue sur Skyzz Shop</h1>
+    <p>Le meilleur endroit pour acheter des comptes Clash of Clans, du Nitro Discord et d'autres services numériques instantanés à prix imbattables.</p>
+    <a href="produits.html" class="btn">Voir les produits</a>
   </section>
 
   <section class="features">
-    <h3>Pourquoi choisir Skyzz Shop ?</h3>
-    <div class="features-grid">
-      <div class="feature">
-        <h4>Sécurité</h4>
-        <p>Nos comptes sont garantis sécurisés et fiables, sans risque de bannissement.</p>
-      </div>
-      <div class="feature">
-        <h4>Livraison rapide</h4>
-        <p>Commandes traitées et livrées en quelques minutes seulement, même la nuit !</p>
-      </div>
-      <div class="feature">
-        <h4>Prix attractifs</h4>
-        <p>Des tarifs parmi les plus bas du marché pour un service premium.</p>
-      </div>
-      <div class="feature">
-        <h4>Support réactif</h4>
-        <p>Besoin d’aide ? Nous sommes disponibles sur Discord et par email 7j/7.</p>
-      </div>
+    <div class="feature">
+      <h3>Livraison instantanée</h3>
+      <p>Reçois tes produits immédiatement après l'achat.</p>
+    </div>
+    <div class="feature">
+      <h3>Sécurité garantie</h3>
+      <p>Paiement sécurisé et données protégées pour une tranquillité d'esprit.</p>
+    </div>
+    <div class="feature">
+      <h3>Support rapide</h3>
+      <p>Nous répondons à toutes tes questions sous 24h via Discord.</p>
     </div>
   </section>
 
@@ -184,4 +136,3 @@
 
 </body>
 </html>
-
