@@ -3,9 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skyzz Shop - Nos Produits</title>
+  <title>Skyzz Shop - Produits</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0e0e0e;
+      color: #ffffff;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    header {
+      background-color: #1a1a1a;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #00ffe7;
+      font-size: 2.5rem;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 30px;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      color: #00ffe7;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 3rem;
+      color: #00ffe7;
+      margin: 60px 0 30px;
+      text-shadow: 0 0 10px #00ffe7;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    .product-card {
+      background-color: #1f1f3d;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,255,231,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-card .content {
+      padding: 20px;
+    }
+
+    .product-card h3 {
+      color: #00ffe7;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      font-size: 0.95rem;
+      color: #cccccc;
+      margin-bottom: 15px;
+      min-height: 60px;
+    }
+
+    .product-card .price {
+      font-size: 1.2rem;
+      color: #00ffe7;
+      margin-bottom: 15px;
+    }
+
+    .product-card a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #00ffe7;
+      color: #0e0e0e;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+    }
+
+    .product-card a:hover {
+      background: #00c7b0;
+    }
+
+    footer {
+      text-align: center;
+      background: #000;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
 
@@ -21,9 +137,9 @@
   <h2 class="section-title">Nos Produits</h2>
 
   <section class="products-grid">
-
+    
     <div class="product-card">
-      <img src="images/coc.jpg" alt="Compte COC" />
+      <img src="images/coc.jpg" alt="Compte COC">
       <div class="content">
         <h3>Compte Clash of Clans</h3>
         <p>Comptes TH11 à TH17, full max, prêts à dominer les guerres. Livraison instantanée.</p>
@@ -33,7 +149,7 @@
     </div>
 
     <div class="product-card">
-      <img src="images/pass-or.jpg" alt="Pass Or" />
+      <img src="images/pass-or.jpg" alt="Pass Or COC">
       <div class="content">
         <h3>Pass Or Clash of Clans</h3>
         <p>Obtiens le Pass Or du mois en cours, livraison rapide et sécurisée sur ton compte existant.</p>
@@ -43,7 +159,7 @@
     </div>
 
     <div class="product-card">
-      <img src="images/nitro-discord.jpg" alt="Nitro Discord" />
+      <img src="images/nitro.jpg" alt="Nitro Discord">
       <div class="content">
         <h3>Nitro Discord</h3>
         <p>Nitro Classic ou Boost, 1 mois, 3 mois ou 1 an. Meilleur prix garanti. Livraison instantanée.</p>
@@ -53,7 +169,7 @@
     </div>
 
     <div class="product-card">
-      <img src="images/boosts-discord.jpg" alt="Boosts Discord" />
+      <img src="images/boost.jpg" alt="Boosts Discord">
       <div class="content">
         <h3>Boosts Discord</h3>
         <p>Ajoute des boosts à ton serveur Discord pour plus de qualité audio, de slots et d’icônes animés.</p>
