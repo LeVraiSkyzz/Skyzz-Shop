@@ -4,119 +4,150 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Skyzz Shop - Produits</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Rajdhani:wght@500&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background-color: #0d0d0d;
-      color: #ffffff;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background: linear-gradient(135deg, #0d0c20, #090a2b);
+      color: #f0f0f0;
+      overflow-x: hidden;
     }
 
     header {
-      background-color: #111;
+      background: linear-gradient(to right, #0ff, #00f2ff);
       padding: 20px;
       text-align: center;
+      box-shadow: 0 0 20px #00ffff88;
     }
 
     header h1 {
-      color: #00ffff;
-      font-size: 2.5rem;
-      text-shadow: 0 0 10px #00ffff;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.8rem;
+      color: #0d0c20;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    nav {
+      margin-top: 10px;
     }
 
     nav a {
-      margin: 0 15px;
-      color: #ffffff;
+      color: #fff;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
+      position: relative;
     }
 
-    nav a:hover {
-      color: #00ffff;
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #0ff;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s ease-out;
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
     }
 
     h2 {
       text-align: center;
-      font-size: 2.5rem;
       margin-top: 30px;
-      text-shadow: 0 0 10px #00ffff;
+      font-size: 2.5rem;
+      color: #0ff;
+      text-shadow: 0 0 15px #0ff;
     }
 
     .product-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 40px 20px;
+      gap: 25px;
+      padding: 50px 40px;
       max-width: 1200px;
-      margin: 0 auto;
+      margin: auto;
     }
 
     .product-card {
-      background-color: #151535;
+      background: linear-gradient(145deg, #121235, #1a1a50);
       border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      padding: 25px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
       display: flex;
       flex-direction: column;
       align-items: center;
-      transition: transform 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(5px);
     }
 
     .product-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 0 35px rgba(0, 255, 255, 0.4);
     }
 
     .product-card img {
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
       object-fit: contain;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 10px #00ffff88);
     }
 
     .product-card h3 {
       color: #00ffff;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
+      font-size: 1.4rem;
       text-align: center;
+      margin-bottom: 10px;
     }
 
     .product-card p {
-      color: #ccc;
-      text-align: center;
       font-size: 0.95rem;
-      line-height: 1.4;
+      text-align: center;
+      color: #cccccc;
+      margin-bottom: 10px;
     }
 
     .price {
-      margin-top: 15px;
+      margin-top: 10px;
+      font-size: 1.2rem;
       color: #00ffff;
       font-weight: bold;
-      font-size: 1.1rem;
     }
 
     .btn {
-      background-color: #00ffff;
-      color: #000;
-      border: none;
-      padding: 10px 25px;
-      border-radius: 50px;
       margin-top: 15px;
+      padding: 10px 30px;
+      background: linear-gradient(90deg, #00f2ff, #0ff);
+      color: #000;
       font-weight: bold;
+      border: none;
+      border-radius: 50px;
       cursor: pointer;
-      transition: background-color 0.3s;
+      box-shadow: 0 0 10px #0ff;
+      transition: all 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #00cccc;
+      background: linear-gradient(90deg, #0ff, #00f2ff);
+      transform: scale(1.05);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #111;
-      margin-top: 40px;
+      padding: 30px;
+      background-color: #0d0c20;
       color: #888;
       font-size: 0.9rem;
     }
@@ -139,32 +170,32 @@
     <div class="product-card">
       <img src="81Z+V7GJIEL_h1_.png" alt="Compte Clash of Clans">
       <h3>Compte Clash of Clans</h3>
-      <p>Comptes TH11 à TH17, full max, prêts à dominer les guerres. Livraison instantanée.</p>
-      <div class="price">À partir de 15 €</div>
+      <p>TH11 à TH17 maxés. Prêts à la guerre ! Livraison immédiate.</p>
+      <div class="price">15 €</div>
       <button class="btn">Acheter</button>
     </div>
 
     <div class="product-card">
-      <img src="clash-of-clans-gold-pass-points-boost.webp" alt="Pass Or Clash of Clans">
+      <img src="clash-of-clans-gold-pass-points-boost.webp" alt="Pass Or COC">
       <h3>Pass Or Clash of Clans</h3>
-      <p>Obtiens le Pass Or du mois en cours, livraison rapide et sécurisée sur ton compte.</p>
-      <div class="price">À partir de 7 €</div>
+      <p>Accède au Pass Or du mois. Paiement sécurisé.</p>
+      <div class="price">7 €</div>
       <button class="btn">Acheter</button>
     </div>
 
     <div class="product-card">
       <img src="nitro-discord.avif" alt="Nitro Discord">
-      <h3>Nitro Discord</h3>
-      <p>Nitro Classic ou Boost – 1 mois, 3 mois ou 1 an. Meilleur prix garanti. Livraison immédiate.</p>
-      <div class="price">À partir de 3 €</div>
+      <h3>Discord Nitro</h3>
+      <p>Nitro classique ou boost. 1 à 12 mois. Instantané !</p>
+      <div class="price">3 €</div>
       <button class="btn">Acheter</button>
     </div>
 
     <div class="product-card">
-      <img src="imgwebp.webp" alt="Boosts Discord">
+      <img src="imgwebp.webp" alt="Boost Discord">
       <h3>Boosts Discord</h3>
-      <p>Ajoute des boosts à ton serveur pour plus de qualité audio, de slots et d’icônes animés.</p>
-      <div class="price">À partir de 2 € / boost</div>
+      <p>Augmente le niveau de ton serveur dès maintenant.</p>
+      <div class="price">2 € / boost</div>
       <button class="btn">Acheter</button>
     </div>
   </section>
