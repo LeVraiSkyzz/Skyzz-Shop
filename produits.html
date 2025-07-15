@@ -1,129 +1,101 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skyzz Shop - Produits</title>
+  <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" />
   <style>
     body {
-      margin: 0;
+      background-color: #0a0a0a;
+      color: #fff;
       font-family: 'Orbitron', sans-serif;
-      background-color: #0d0d0d;
-      color: #ffffff;
+      margin: 0;
+      padding: 0;
     }
-
     header {
       background-color: #111;
       padding: 20px;
       text-align: center;
+      box-shadow: 0 0 20px #0ff;
     }
-
-    header h1 {
-      color: #00ffff;
-      font-size: 2.5rem;
-      text-shadow: 0 0 10px #00ffff;
-    }
-
     nav a {
-      margin: 0 15px;
-      color: #ffffff;
+      color: cyan;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
+      transition: 0.3s;
     }
-
     nav a:hover {
-      color: #00ffff;
+      color: #fff;
+      text-shadow: 0 0 5px #0ff;
     }
-
-    h2 {
+    .product-section {
+      padding: 60px 20px;
       text-align: center;
-      font-size: 2.5rem;
-      margin-top: 30px;
-      text-shadow: 0 0 10px #00ffff;
+      animation: fadeIn 1.2s ease;
     }
-
     .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .product-card {
-      background-color: #151535;
-      border-radius: 20px;
-      padding: 20px;
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: transform 0.3s;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
     }
-
-    .product-card:hover {
-      transform: translateY(-5px);
+    .product {
+      background: #1a1a2e;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #0ff4;
+      width: 250px;
+      padding: 20px;
+      animation: slideUp 1s ease;
     }
-
-    .product-card img {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-      margin-bottom: 15px;
+    .product img {
+      max-width: 100%;
+      border-radius: 10px;
     }
-
-    .product-card h3 {
-      color: #00ffff;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      text-align: center;
+    .product h4 {
+      color: cyan;
+      margin: 10px 0;
     }
-
-    .product-card p {
+    .product p {
+      font-size: 0.95em;
       color: #ccc;
-      text-align: center;
-      font-size: 0.95rem;
-      line-height: 1.4;
     }
-
-    .price {
-      margin-top: 15px;
-      color: #00ffff;
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-
     .btn {
-      background-color: #00ffff;
+      background: cyan;
       color: #000;
-      border: none;
-      padding: 10px 25px;
-      border-radius: 50px;
-      margin-top: 15px;
+      padding: 10px 20px;
+      border-radius: 30px;
       font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+      transition: 0.3s;
     }
-
     .btn:hover {
-      background-color: #00cccc;
+      background: #0ff;
+      box-shadow: 0 0 15px #0ff;
     }
-
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes slideUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #111;
-      margin-top: 40px;
-      color: #888;
-      font-size: 0.9rem;
+      background: #111;
+      color: #aaa;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Skyzz Shop</h1>
     <nav>
@@ -133,45 +105,32 @@
     </nav>
   </header>
 
-  <h2>Nos Produits</h2>
-
-  <section class="product-grid">
-    <div class="product-card">
-      <img src="81Z+V7GJIEL_h1_.png" alt="Compte Clash of Clans">
-      <h3>Compte Clash of Clans</h3>
-      <p>Comptes TH11 à TH17, full max, prêts à dominer les guerres. Livraison instantanée.</p>
-      <div class="price">À partir de 15 €</div>
-      <button class="btn">Acheter</button>
-    </div>
-
-    <div class="product-card">
-      <img src="clash-of-clans-gold-pass-points-boost.webp" alt="Pass Or Clash of Clans">
-      <h3>Pass Or Clash of Clans</h3>
-      <p>Obtiens le Pass Or du mois en cours, livraison rapide et sécurisée sur ton compte.</p>
-      <div class="price">À partir de 7 €</div>
-      <button class="btn">Acheter</button>
-    </div>
-
-    <div class="product-card">
-      <img src="nitro-discord.avif" alt="Nitro Discord">
-      <h3>Nitro Discord</h3>
-      <p>Nitro Classic ou Boost – 1 mois, 3 mois ou 1 an. Meilleur prix garanti. Livraison immédiate.</p>
-      <div class="price">À partir de 3 €</div>
-      <button class="btn">Acheter</button>
-    </div>
-
-    <div class="product-card">
-      <img src="imgwebp.webp" alt="Boosts Discord">
-      <h3>Boosts Discord</h3>
-      <p>Ajoute des boosts à ton serveur pour plus de qualité audio, de slots et d’icônes animés.</p>
-      <div class="price">À partir de 2 € / boost</div>
-      <button class="btn">Acheter</button>
+  <section class="product-section">
+    <h2>Nos produits</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="81Z+V7GJIEL._h1_.png" alt="Clash of Clans">
+        <h4>Compte Clash of Clans</h4>
+        <p>Comptes HDV maxés, livraison instantanée.</p>
+        <a href="#" class="btn">Acheter</a>
+      </div>
+      <div class="product">
+        <img src="clash-of-clans-gold-pass-points-boost.webp" alt="Gold Pass">
+        <h4>Gold Pass</h4>
+        <p>Boost tes ressources avec le Gold Pass officiel.</p>
+        <a href="#" class="btn">Acheter</a>
+      </div>
+      <div class="product">
+        <img src="nitro-discord.avif" alt="Nitro Discord">
+        <h4>Discord Nitro</h4>
+        <p>Abonnement 1 mois / 1 an. Envoi automatique.</p>
+        <a href="#" class="btn">Acheter</a>
+      </div>
     </div>
   </section>
 
   <footer>
     &copy; 2025 Skyzz Shop. Tous droits réservés.
   </footer>
-
 </body>
 </html>
